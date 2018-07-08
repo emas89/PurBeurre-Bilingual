@@ -1,0 +1,26 @@
+{% extends 'openfoodfacts/base.html' %}
+
+{% block title%}{{ page_title }}{% endblock %}
+
+{% block content %}
+
+{% include 'openfoodfacts/header.html' with title=title img=img %}
+
+<section>
+    <div class="container">
+        <p> Ce site internet est hébergé par <a href="http://heroku.com/contact" title="Heroku">Heroku</a><br>
+            Son siège social se situe à : <br>
+            The Landmark @ 1 Market St <br>
+            Suite 300 <br>
+            San Francisco, CA 94105 <br>
+        </p>
+        <p>
+            Image de fond: credit by Olenka Kotyk, plateforme Unsplash <br>
+            Icone carrotte: credit by Fabien Jouin, 'the Noun Project' <br>
+        </p>
+        <p>L'auteur du site est Pellegrini Emanuele pour <a href="http://openclassrooms.com" title="Heroku">Openclassrooms.</a><br></p>
+    </div>
+
+</section>
+
+{% endblock %}
