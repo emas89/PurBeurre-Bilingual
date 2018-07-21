@@ -1,9 +1,9 @@
 {% extends 'openfoodfacts/base.html' %}
 
-{% block title%}{{ page_title }}{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
-{% include 'openfoodfacts/header.html' with img="!!! INSERIRE PERCORSO IMG HEADER !!!" title="Connectez vous" %}
+{% include 'openfoodfacts/header.html' with img="https://unsplash.com/photos/eqsEZNCm4-c" title="Se connecter" %}
 <section class='text-center ml-auto'>
     <div class="container">
         <div class="row">
@@ -19,7 +19,7 @@
     </div>
         <div class="container text-center">
             <br>
-            <p>Pas encore de compte?
+            <p>Pas encore enregistré(e) ?
             <a href="{% url 'openfoodfacts:sign_up' %}">Inscrivez vous !</a></p>
 
         </div>
