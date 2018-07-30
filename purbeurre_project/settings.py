@@ -21,16 +21,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#y3olztekb76@6#ho42e#*l(6c%crnh@pf14ilft4qu^)((k&d'
+SECRET_KEY = 'z72ij%9fc1m1sto6zm_13lnnw114f8th0k6t&*a41y%4h*&&=2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
+	DEBUG = False
+	#ALLOWED_HOSTS = ['replace with production host']
 else:
-    DEBUG = True
-
-
-ALLOWED_HOSTS = ['127.0.0.1']
+	DEBUG = True
+	ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'openfoodfacts.apps.OpenfoodfactsConfig',
+    'purbeurre.apps.PurbeurreConfig'
 ]
 
 MIDDLEWARE = [
@@ -85,7 +84,7 @@ WSGI_APPLICATION = 'purbeurre_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'openfoodfacts',
+        'NAME': 'purbeurre',
         'USER': 'emanuele',
         'PASSWORD': '',
         'HOST': '',
@@ -135,23 +134,25 @@ STATIC_URL = '/static/'
 # Django debug toolbar
 INTERNAL_IPS = ['127.0.0.1']
 
-LOGIN_REDIRECT_URL = '/openfoodfacts/account'
-LOGIN_URL = '/openfoodfacts/login'
+LOGIN_REDIRECT_URL = '/purbeurre/account'
+LOGIN_URL = '/purbeurre/login'
 
 if os.environ.get('ENV') == 'PRODUCTION':
+	# URL = "replace with website URL"
 
-    # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+	# Static file settings
+	PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+	STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
-    # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+	# Extra places for collectstatic to find static files.
+	STATICFILES_DIRS = (
+		os.path.join(PROJECT_ROOT, 'static'),
+	)
 
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+	# Simplified static file serving.
+	# https://warehouse.python.org/project/whitenoise/
+	STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+	db_from_env = dj_database_url.config(conn_max_age=500)
+	DATABASES['default'].update(db_from_env)

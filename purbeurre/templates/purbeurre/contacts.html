@@ -1,0 +1,11 @@
+{% extends 'purbeurre/base.html'%}
+
+{% block title%}{{ page_title }}{% endblock %}
+
+{% block content %}
+
+{% include 'purbeurre/header.html' with title=title img=img %}
+
+{% include 'purbeurre/contact.html' %}
+
+{% endblock %}

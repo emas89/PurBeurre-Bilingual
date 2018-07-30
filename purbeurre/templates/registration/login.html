@@ -1,0 +1,28 @@
+{% extends 'purbeurre/base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+{% include 'purbeurre/header.html' with img="https://unsplash.com/photos/eqsEZNCm4-c" title="Se connecter" %}
+<section class='text-center ml-auto'>
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto text-center">
+                <form id="login_form"
+                method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button class="btn btn-primary" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="container text-center">
+            <br>
+            <p>Pas encore enregistré (e) ?
+            <a href="{% url 'purbeurre:sign_up' %}"><u>Inscrivez-vous</u></a> en deux clicks !<br> Vous pourrez enregistrer vos aliments préférés dans votre espace personnel et gagner en temps lors de la prochaine recherche.<br> C'est gratuit et génial !</p>
+        </div>
+
+</section>
+
+{% endblock %}
