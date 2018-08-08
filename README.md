@@ -1,9 +1,7 @@
 # PUR BEURRE Web App
 ## A nutritional advisor that helps users to eat healthier foods
 
-![PurBeurre homepage][id]
-
-[id]: C:\Users\Emanuele\Desktop\P8\purbeurre\static\purbeurre\img\thumb.jpg "PurBeurre Homepage"
+![Pur Beurre Homepage](https://github.com/emas89/Project-8_PurBeurre_webapp/blob/master/purbeurre/static/purbeurre/img/thumb.jpg)
 
 ### Project based on OpenFoodFacts (https://fr.openfoodfacts.org/)
 
