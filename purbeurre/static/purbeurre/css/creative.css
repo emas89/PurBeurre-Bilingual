@@ -316,12 +316,13 @@ header.masthead p {
 }
 
 .page-link{
-  color: #6C757D;
+  color: #DE9440;
   border: none;
 }
 
-
-
+.page-link:hover {
+  color: #C45525;
+}
 
 .text-primary {
   color: #DE9440 !important;
@@ -338,6 +339,11 @@ header.masthead p {
 .btn-outline-secondary{
   color: #fff;
 }
+
+.btn-outline-secondary:hover {
+  background-color: #86ebe6;
+}
+
 .btn-xl {
   padding: 1rem 2rem;
 }
@@ -387,10 +393,6 @@ label
   display: block;
   width: 250px;
   float: center;
-}
-
-btn btn-outline-secondary::selection {
-  color: #86ebe6;
 }
 
 footer > div > div > div > p > a{

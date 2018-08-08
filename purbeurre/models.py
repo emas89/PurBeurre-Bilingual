@@ -1,13 +1,23 @@
+# Imports
 from django.db import models
 from django.contrib.auth.models import User
 
+
+# Categories
 class Categories(models.Model):
+	"""
+	Handles food categories from OpenFoodFacts
+	"""
 	category_name = models.CharField(max_length=255, unique=True)
 	def __str__(self):
 		return self.category_name
 
 
+# Products
 class Products(models.Model):
+	"""
+	Food management
+	"""
 	id_product = models.BigIntegerField(primary_key=True)
 	product_name = models.CharField(max_length=255)
 	url = models.URLField()
@@ -30,7 +40,12 @@ class Products(models.Model):
 			})
 
 
+
+# Substitutes
 class Substitutes(models.Model):
+	"""
+	Table association between products and user to save chosen substitute meal(s) for a specific user
+	"""
 	origin = models.ForeignKey(Products, related_name='origin', on_delete=models.CASCADE)
 	replacement = models.ForeignKey(Products, related_name='replacement', on_delete=models.CASCADE)
 	user = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE, null=True)

@@ -1,3 +1,4 @@
+# Imports
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import Http404
@@ -10,33 +11,50 @@ from .models import Products, Substitutes
 
 IMG = 'https://unsplash.com/photos/eqsEZNCm4-c'
 
+
+# Index
 def index(request):
+    """
+    Homepage
+    """
     context = {
     "page_title" : "Accueil"
     }
     return render(request, 'purbeurre/index.html')
 
 
+# Search queries
 def search(request):
+    """
+    Search a food to replace
+    Manage save products-operation if the user is logged
+    """
+    # Query
     query = request.GET.get('query')
 
-    # if query matches with product_name
+    # If query matches with product_name
     query_prod = Products.objects.filter(product_name__iexact=query).first()
 
-    # if query doesn't match exactly but can matches with product_name
+    # If query doesn't match exactly but can matches with product_name
     if not query_prod:
         query_prod = Products.objects.filter(product_name__icontains=query).first()
 
-    # query doesn't match at all
+    # If query doesn't match at all
     if not query_prod:
-        raise Http404 # catch a 404 error -> not found
+        # Catch a 404 error -> not found product page
+        raise Http404
     else:
+        # Add the dishes to the products list filtered by category,
         products_list = Products.objects.filter(category=query_prod.category)
+        # nutrition grade
         products_list = products_list.filter(nutriscore__lte=query_prod.nutriscore)
+        # order them by nutrition score
         products_list = products_list.order_by('nutriscore')
+        # exclude a saved product from products list
         products_list = products_list.exclude(pk=query_prod.id_product)
 
 
+        # If user login = True
         if request.user.is_authenticated:
             # Remove dishes already in the user's list
             for product in products_list:
@@ -50,21 +68,25 @@ def search(request):
 
     # If user wants to save a dish
     if request.user.is_authenticated and request.method == 'POST':
+        # Meal searched
         origin = request.POST.get('origin')
+        # Desired alternative
         replacement = request.POST.get('replacement')
 
         origin = Products.objects.get(pk=origin)
         replacement = Products.objects.get(pk=replacement)
 
+        # Place the searched meal and his healthy alternative in the user's list
         Substitutes.objects.create(
-            origin=origin,
-            replacement=replacement,
-            user=request.user
+            origin = origin,
+            replacement = replacement,
+            user = request.user
             )
+        # Exclude saved item(s) from search results page
         products_list = products_list.exclude(pk=replacement.id_product)
 
     # Slice pages
-    paginator = Paginator(products_list, 9) # dispose 9 articles by page
+    paginator = Paginator(products_list, 9) # 9 articles by page
     page = request.GET.get('page')
 
     try:
@@ -74,11 +96,13 @@ def search(request):
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
 
+    # Render
     context = {
         'products': products,
         'paginate': True,
         'query': query,
         'title': query_prod.product_name,
+        'category': query_prod.category,
         'img': query_prod.img,
         'query_prod': query_prod.id_product,
         "page_title": "Résultats"
@@ -86,7 +110,13 @@ def search(request):
     return render(request, 'purbeurre/search.html', context)
 
 
+# Detail
 def detail(request, id_product):
+    """
+    Products details page with nutritional info
+    """
+
+    # Get dish
     product = get_object_or_404(Products, pk=id_product)
 
     fat_index_img = ""
@@ -95,7 +125,7 @@ def detail(request, id_product):
     sugar_index_img = ""
     url = "https://static.openfoodfacts.org/images/misc/"
 
-    # dish proprerties:
+    # Dish proprerties:
     if product.fat:
         if product.fat < 3:
             fat_index_img = url + "low_30.png" # URL corresponding to a green circe image to indicate a good choice
@@ -104,7 +134,7 @@ def detail(request, id_product):
         else:
             fat_index_img = url + "high_30.png" # URL corresponding to a red circe image to indicate a bad choice
 
-    # same URL priciple to all others food properties
+    # Same URL priciple to all others food properties
     if product.saturated_fat:
         if product.saturated_fat < 1.5:
             saturated_fat_index_img = url + "low_30.png"
@@ -129,6 +159,7 @@ def detail(request, id_product):
         else:
             sugar_index_img = url + "high_30.png"
 
+    # Render
     context = {
         "product": product.product_name,
         "img": product.img,
@@ -147,9 +178,14 @@ def detail(request, id_product):
     return render(request, 'purbeurre/detail.html', context)
 
 
+# Sign up
 def sign_up(request):
+    """
+    User registration page
+    """
     if request.method == 'POST':
         form = SignUpForm(request.POST)
+        # if form is valid
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -160,6 +196,7 @@ def sign_up(request):
     else:
         form = SignUpForm()
 
+    # Render
     context = {
         "form": form,
         "title": "S'enregistrer",
@@ -169,8 +206,14 @@ def sign_up(request):
     return render(request, 'purbeurre/sign_up.html', context)
 
 
+# User account
 @login_required
 def account(request):
+    """
+    User informations page
+    """
+
+    # Render
     context = {
         "user": request.user,
         "img": IMG,
@@ -179,7 +222,13 @@ def account(request):
     return render(request, 'purbeurre/account.html', context)
 
 
+# Contacts
 def contacts(request):
+    """
+    Contacts page on footer
+    """
+
+    # Render
     context = {
         "title": 'Contacts',
         "img": IMG,
@@ -188,7 +237,13 @@ def contacts(request):
     return render(request, 'purbeurre/contacts.html', context)
 
 
+# Legals
 def legals(request):
+    """
+    Legal informations page on footer
+    """
+
+    # Render
     context = {
         "title": "Mentions légales",
         "img": IMG,
@@ -197,10 +252,15 @@ def legals(request):
     return render(request, 'purbeurre/legals.html', context)
 
 
+# User's saved meals and substitutes
 @login_required
 def saved(request):
+    """
+    User's saved products and manage food(s) deletion
+    """
     products_saved = Substitutes.objects.filter(user=request.user)
 
+    # If user wants to delete a substitute product
     if request.method == 'POST':
         origin = request.POST.get('origin')
         replacement = request.POST.get('replacement')
@@ -208,6 +268,7 @@ def saved(request):
         origin = Products.objects.get(pk=origin)
         replacement = Products.objects.get(pk=replacement)
 
+        # Delete product from user's list
         Substitutes.objects.get(
             origin=origin,
             replacement=replacement,
@@ -215,7 +276,7 @@ def saved(request):
             ).delete()
 
     # Slice pages
-    paginator = Paginator(products_saved, 5)
+    paginator = Paginator(products_saved, 5) # show 5 items every page
     page = request.GET.get('page')
 
     try:
@@ -226,6 +287,7 @@ def saved(request):
         products_saved = paginator.page(paginator.num_pages)
 
 
+    # Render
     context = {
         "title": "Vos aliments sauvegardés",
         "img": IMG,
