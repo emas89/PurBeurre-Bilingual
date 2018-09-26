@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'z72ij%9fc1m1sto6zm_13lnnw114f8th0k6t&*a41y%4h*&&=2'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'z72ij%9fc1m1sto6zm_13lnnw114f8th0k6t&*a41y%4h*&&=2') #dev key for mow
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
 	DEBUG = False
-	#ALLOWED_HOSTS = ['replace with production host']
+	ALLOWED_HOSTS = ['purbeurre-webapp.herokuapp.com']
 else:
 	DEBUG = True
 	ALLOWED_HOSTS = ['127.0.0.1']
@@ -138,7 +138,7 @@ LOGIN_REDIRECT_URL = '/purbeurre/account'
 LOGIN_URL = '/purbeurre/login'
 
 if os.environ.get('ENV') == 'PRODUCTION':
-	# URL = "replace with website URL"
+	URL = "https://purbeurre-webapp.herokuapp.com/"
 
 	# Static file settings
 	PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -156,3 +156,6 @@ if os.environ.get('ENV') == 'PRODUCTION':
 
 	db_from_env = dj_database_url.config(conn_max_age=500)
 	DATABASES['default'].update(db_from_env)
+
+else:
+	URL = 'http://127.0.0.1:8000/' #LOCAL settings
