@@ -47,7 +47,7 @@
     <div class="clearfix"></div>
     <div class="container center my-4">
         <nav aria-label="">
-            <ul class="pagination justify-content-center pagination-sm">
+            <ul class="pagination pagination-sm flex-wrap justify-content-center" style="text-overflow: ellipsis;">
               {% if products.has_previous %}
                   <li class="page-item"><a class="page-link" href="?query={{ query }}&page={{ products.previous_page_number }}">Précédent</a></li>
               {% endif %}
