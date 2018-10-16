@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% block title%}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -9,8 +11,8 @@
     {% if products_saved|length_is:"0" %}
     <section>
         <div class="container text-center">
-            <h2>Vous n'avez pas encore de produits sauvegardés</h2><br>
-            <p>Cherchez un produit plus sain sur notre site web et sauvegardez-le dans votre espace personnel pour le retrouver plus facilement la prochaine fois !.</p>
+            <h2>{% trans "Vous n'avez pas encore de produits sauvegardés" %}</h2><br>
+            <p>{% trans "Cherchez un produit plus sain sur notre site web et sauvegardez-le dans votre espace personnel pour le retrouver plus facilement la prochaine fois" %} !</p>
 
         </div>
     </section>
@@ -21,11 +23,11 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-6">
-                    <h3>Produit d'origine</h3>
+                    <h3>{% trans "Produit d'origine" %}</h3>
                     <hr>
                 </div>
                 <div class="col-lg-6">
-                    <h3>Alternative recommandée</h3>
+                    <h3>{% trans "Alternative recommandée" %}</h3>
                     <hr>
                 </div>
             </div>
@@ -47,7 +49,7 @@
                             {% csrf_token %}
                             <input type="hidden" name="origin" value="{{product.origin.id_product}}"/>
                             <input type="hidden" name="replacement" value="{{product.replacement.id_product}}"/>
-                            <button><i class="fa fa-times">&nbsp; <u>Supprimer</u></i></button>
+                            <button><i class="fa fa-times">&nbsp; <u>{% trans "Supprimer" %}</u></i></button>
                         </form>
                     </div>
                 </div>
@@ -64,7 +66,7 @@
             <nav aria-label="">
                 <ul class="pagination justify-content-center pagination-sm">
                   {% if products_saved.has_previous %}
-                      <li class="page-item"><a class="page-link" href="?page={{ products_saved.previous_page_number }}">Précédent</a></li>
+                      <li class="page-item"><a class="page-link" href="?page={{ products_saved.previous_page_number }}">{% trans "Précédent" %}</a></li>
                   {% endif %}
 
                   {% for page in products_saved.paginator.page_range %}
@@ -83,7 +85,7 @@
                     {% endif %}
                   {% endfor %}
                   {% if products_saved.has_next %}
-                      <li class="page-item"><a class="page-link" href="?page={{ products_saved.next_page_number }}">Suivant</a></li>
+                      <li class="page-item"><a class="page-link" href="?page={{ products_saved.next_page_number }}">{% trans "Suivant" %}</a></li>
                   {% endif %}
                 </ul>
             </nav>

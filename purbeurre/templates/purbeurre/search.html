@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% load static %}
 
 {% block title%}{{ page_title }}{% endblock %}
@@ -10,7 +12,7 @@
 {% if products|length_is:"0" %}
 <section>
     <div class="container text-center">
-        <h2>Malheureusement il n'y a pas encore d'aliment substitutif par rapport à votre choix. Veuillez nous excuser.</h2><br>
+        <h2>{% trans "Malheureusement il n'y a pas encore d'aliment substitutif par rapport à votre choix. Veuillez nous excuser" %}.</h2><br>
     </div>
 </section>
 
@@ -18,7 +20,7 @@
 <aside id="search-top"></aside>
 <section>
     <div class="container text-center mb-5" >
-            <h3>Substituts dietétiques :</h3>
+            <h3>{% trans "Substituts dietétiques" %} :</h3>
             <hr>
         <div class="row  mb-4">
             {% for product in products %}
@@ -33,7 +35,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="origin" value="{{query_prod}}"/>
                     <input type="hidden" name="replacement" value="{{product.id_product}}"/>
-                    <button><i class="fa fa-floppy-o" aria-hidden="true">&nbsp; <u>Sauvegarder</u></i></button>
+                    <button><i class="fa fa-floppy-o" aria-hidden="true">&nbsp; <u>{% trans "Sauvegarder" %}</u></i></button>
                 </form>
                 {% endif %}
             </div>
@@ -49,7 +51,7 @@
         <nav aria-label="">
             <ul class="pagination pagination-sm flex-wrap justify-content-center" style="text-overflow: ellipsis;">
               {% if products.has_previous %}
-                  <li class="page-item"><a class="page-link" href="?query={{ query }}&page={{ products.previous_page_number }}">Précédent</a></li>
+                  <li class="page-item"><a class="page-link" href="?query={{ query }}&page={{ products.previous_page_number }}">{% trans "Précédent" %}</a></li>
               {% endif %}
 
               {% for page in products.paginator.page_range %}
@@ -68,7 +70,7 @@
                 {% endif %}
               {% endfor %}
               {% if products.has_next %}
-                  <li class="page-item"><a class="page-link" href="?query={{ query }}&page={{ products.next_page_number }}">Suivant</a></li>
+                  <li class="page-item"><a class="page-link" href="?query={{ query }}&page={{ products.next_page_number }}">{% trans "Suivant" %}</a></li>
               {% endif %}
             </ul>
         </nav>

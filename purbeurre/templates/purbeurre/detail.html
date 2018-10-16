@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% block title%}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -11,14 +13,14 @@
                 <img src="https://static.openfoodfacts.org/images/misc/nutriscore-{{nutriscore}}.svg">
             </div>
             <div class="col-lg-6 mb-4">
-                <h5>Repères nutritionelles pour 100g:</h5><br>
-                    <img id="index_img" style="float: left" src="{{ fat_index_img }}" ><h6>&nbsp; {{fat }}&nbsp; g <b>Matières grasses / Lipides</b></h6><br>
-                    <img id="index_img" style="float: left" src="{{ saturated_fat_index_img }}"><h6>&nbsp; {{ saturated_fat }}&nbsp;  g <b>Acides gras saturés</b></h6><br>
-                    <img id="index_img" style="float: left" src="{{ salt_index_img }}"><h6>&nbsp; {{salt }}&nbsp;g <b>Sel</b></h6><br>
-                    <img id="index_img" style="float: left" src="{{ sugar_index_img }} "><h6 class="mb-auto">&nbsp; {{ sugar }}&nbsp;g <b>Sucres</b></h6><br>
+                <h5>{% trans "Repères nutritionelles pour" %} 100g:</h5><br>
+                    <img id="index_img" style="float: left" src="{{ fat_index_img }}" ><h6>&nbsp; {{fat }}&nbsp; g <b>{% trans "Matières grasses / Lipides" %}</b></h6><br>
+                    <img id="index_img" style="float: left" src="{{ saturated_fat_index_img }}"><h6>&nbsp; {{ saturated_fat }}&nbsp;  g <b>{% trans "Acides gras saturés" %}</b></h6><br>
+                    <img id="index_img" style="float: left" src="{{ salt_index_img }}"><h6>&nbsp; {{salt }}&nbsp;g <b>{% trans "Sel" %}</b></h6><br>
+                    <img id="index_img" style="float: left" src="{{ sugar_index_img }} "><h6 class="mb-auto">&nbsp; {{ sugar }}&nbsp;g <b>{% trans "Sucres" %}</b></h6><br>
             </div>
             <div class="container my-4 text-center">
-                <a href="{{ redirection }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Plus d'infos sur OpenFoodFacts</a>
+                <a href="{{ redirection }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">{% trans "Plus d'infos sur OpenFoodFacts" %}</a>
             </div>
         </div>
     </div>

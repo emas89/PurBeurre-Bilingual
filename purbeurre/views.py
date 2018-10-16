@@ -5,6 +5,7 @@ from django.http import Http404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import ugettext_lazy as _
 
 from .forms import SignUpForm
 from .models import Products, Substitutes
@@ -105,7 +106,7 @@ def search(request):
         'category': query_prod.category,
         'img': query_prod.img,
         'query_prod': query_prod.id_product,
-        "page_title": "Résultats"
+        "page_title": _("Résultats")
     }
     return render(request, 'purbeurre/search.html', context)
 
@@ -199,9 +200,9 @@ def sign_up(request):
     # Render
     context = {
         "form": form,
-        "title": "S'enregistrer",
+        "title": _("S'enregistrer"),
         "img": IMG,
-        "page_title": "S'enregistrer"
+        "page_title": _("S'enregistrer")
     }
     return render(request, 'purbeurre/sign_up.html', context)
 
@@ -217,7 +218,7 @@ def account(request):
     context = {
         "user": request.user,
         "img": IMG,
-        "page_title": 'Votre compte'
+        "page_title": _('Votre compte')
     }
     return render(request, 'purbeurre/account.html', context)
 
@@ -232,7 +233,7 @@ def contacts(request):
     context = {
         "title": 'Contacts',
         "img": IMG,
-        "page_title": 'Nous contacter'
+        "page_title": _('Nous contacter')
         }
     return render(request, 'purbeurre/contacts.html', context)
 
@@ -245,9 +246,9 @@ def legals(request):
 
     # Render
     context = {
-        "title": "Mentions légales",
+        "title": _("Mentions légales"),
         "img": IMG,
-        "page_title": "Mentions légales"
+        "page_title": _("Mentions légales")
     }
     return render(request, 'purbeurre/legals.html', context)
 
@@ -289,10 +290,10 @@ def saved(request):
 
     # Render
     context = {
-        "title": "Vos aliments sauvegardés",
+        "title": _("Vos aliments sauvegardés"),
         "img": IMG,
         "products_saved": products_saved,
         "paginate": True,
-        "page_title": "Vos aliments sauvegardés"
+        "page_title": _("Vos aliments sauvegardés")
     }
     return render(request, 'purbeurre/saved.html', context)

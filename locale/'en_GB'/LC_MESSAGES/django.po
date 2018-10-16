@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-16 11:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\404.html:11
+msgid ""
+"Le produit que vous cherchez n'est pas encore présent dans notre base de "
+"données. Effectuez une autre recherche"
+msgstr ""
+"The product you are looking for is not yet in our database. Do another search"
+
+#: .\templates\purbeurre\account.html:15
+msgid "Bienvenue sur votre espace personnel"
+msgstr "Welcome to your personal account"
+
+#: .\templates\purbeurre\account.html:30
+msgid "Mes aliments"
+msgstr "My meals"
+
+#: .\templates\purbeurre\account.html:31
+msgid "Déconnexion"
+msgstr "Disconnect"
+
+#: .\templates\purbeurre\contact.html:7
+msgid "Contactez nous"
+msgstr "Contact us"
+
+#: .\templates\purbeurre\contact.html:9
+msgid "Nous serons ravis de vous répondre"
+msgstr "We will be happy to answer you"
+
+#: .\templates\purbeurre\detail.html:16
+msgid "Repères nutritionelles pour"
+msgstr "Nutritional benchmarks for"
+
+#: .\templates\purbeurre\detail.html:17
+msgid "Matières grasses / Lipides"
+msgstr "Fats / Lipids"
+
+#: .\templates\purbeurre\detail.html:18
+msgid "Acides gras saturés"
+msgstr "Saturated fatty acids"
+
+#: .\templates\purbeurre\detail.html:19
+msgid "Sel"
+msgstr "Salt"
+
+#: .\templates\purbeurre\detail.html:20
+msgid "Sucres"
+msgstr "Sugars"
+
+#: .\templates\purbeurre\detail.html:23
+msgid "Plus d'infos sur OpenFoodFacts"
+msgstr "More infos on Open Food Facts"
+
+#: .\templates\purbeurre\index.html:16
+msgid "Du gras, oui, mais de qualité"
+msgstr "Fat is ok, but a qualitative one"
+
+#: .\templates\purbeurre\index.html:20
+msgid ""
+"Trouvez un produit de substitution pour ceux que vous consommez tous les "
+"jours"
+msgstr "Find a healthier meal for those you eat every day"
+
+#: .\templates\purbeurre\index.html:24
+msgid "Produit à susbstituer"
+msgstr "Meal to be substituted"
+
+#: .\templates\purbeurre\index.html:26
+msgid "Go sain"
+msgstr "Go healthy"
+
+#: .\templates\purbeurre\index.html:39
+msgid "et"
+msgstr "and"
+
+#: .\templates\purbeurre\index.html:40
+msgid "De la ratatouille aux croissants"
+msgstr "From Ratatuille to croissants"
+
+#: .\templates\purbeurre\index.html:41
+msgid ""
+"Pur Beurre est l'initiative de deux amoureux de la gastronomie française, "
+"Colette Tatou et Rémy, que vous avez déjà certainement rencontrés dans notre "
+"excellent restaurant Ratatouille"
+msgstr ""
+"Pur Beurre is the initiative of two lovers of French gastronomy, Colette "
+"Tatou and Rémy, that you have certainly met in our excellent restaurant"
+
+#: .\templates\purbeurre\index.html:47
+msgid ""
+"Nous aimons tout manger, surtout en France ! Personnellement, une baguette "
+"fraîche, du bon fromage de chèvre et un bon vin rouge me suffisent "
+"amplement. Comme tout le monde, je fais mes courses au supermarché. Mais "
+"petit à petit je me suis rendue compte, surtout lorsque nous avons ouvert le "
+"restaurant, que je pouvais remplacer les produits aseptisés que j'avais "
+"l'habitude d'acheter par de bons produits du terroir. Et souvent pour le "
+"même prix"
+msgstr "We like to eat everything, especially in France ! Personally, a fresh baguette, good goat cheese and a good red wine are enough for me. Like everyone else, I go to shopping at the supermarket. But little by little I realized that I could replace the aseptic products that I used to buy with good local products, often for the same price, especially after the restaurant's opening"
+
+#: .\templates\purbeurre\index.html:51
+msgid ""
+"Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup "
+"me balader, surtout dans les caves et les cuisines. Je connaissais par coeur "
+"le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de "
+"tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait "
+"remplacer son Nutella matinal par un aliment plus sain, je savais tout de "
+"suite où le trouver. L'idée de Pur Beurre était née !"
+msgstr ""
+"For my part I already went to many stores because I like to walk around, "
+"especially in cellars and kitchens. I knew by heart the content of organic "
+"shops (which I love) and the ingredients of all the food sold. When Colette "
+"asked me if she could replace her morning Nutella with a healthier food, I "
+"knew where to find it right away. The idea of Pur Beurre was born !"
+
+#: .\templates\purbeurre\legals.html:13
+msgid "Site internet hébergé par"
+msgstr "Website hosted by"
+
+#: .\templates\purbeurre\legals.html:14
+msgid "Siège social"
+msgstr "Headquarters"
+
+#: .\templates\purbeurre\legals.html:24
+msgid "Image de fond: credit by Olenka Kotyk, plateforme"
+msgstr "Background image: credit by Olenka Kotyk, platform"
+
+#: .\templates\purbeurre\legals.html:25
+msgid "Icone carotte"
+msgstr "Carrot icon"
+
+#: .\templates\purbeurre\legals.html:30
+msgid "pour la startup <strong><i>Pur Beurre"
+msgstr "for the startup"
+
+#: .\templates\purbeurre\saved.html:14
+msgid "Vous n'avez pas encore de produits sauvegardés"
+msgstr "You don't have any saved products yet"
+
+#: .\templates\purbeurre\saved.html:15
+msgid ""
+"Cherchez un produit plus sain sur notre site web et sauvegardez-le dans "
+"votre espace personnel pour le retrouver plus facilement la prochaine fois"
+msgstr ""
+"Look for a healthier product on our app and save it in your personal space "
+"to find it more easily next time!"
+
+#: .\templates\purbeurre\saved.html:26
+msgid "Produit d'origine"
+msgstr "Original product"
+
+#: .\templates\purbeurre\saved.html:30
+msgid "Alternative recommandée"
+msgstr "Healthier alternative"
+
+#: .\templates\purbeurre\saved.html:52
+msgid "Supprimer"
+msgstr "Remove"
+
+#: .\templates\purbeurre\saved.html:69 .\templates\purbeurre\search.html:54
+msgid "Précédent"
+msgstr "Previous"
+
+#: .\templates\purbeurre\saved.html:88 .\templates\purbeurre\search.html:73
+msgid "Suivant"
+msgstr "Next"
+
+#: .\templates\purbeurre\search.html:15
+msgid ""
+"Malheureusement il n'y a pas encore d'aliment substitutif par rapport à "
+"votre choix. Veuillez nous excuser"
+msgstr ""
+"Unfortunately there is still no substitute for your choice. Please excuse us"
+
+#: .\templates\purbeurre\search.html:23
+msgid "Substituts dietétiques"
+msgstr "Healthier substitutes"
+
+#: .\templates\purbeurre\search.html:38
+msgid "Sauvegarder"
+msgstr "Save"
+
+#: .\templates\purbeurre\sign_up.html:26 .\views.py:203 .\views.py:205
+msgid "S'enregistrer"
+msgstr "Sign up"
+
+#: .\templates\purbeurre\sign_up.html:29
+msgid "Déjà enregistré (e)"
+msgstr "Already have an account"
+
+#: .\templates\purbeurre\sign_up.html:29
+msgid "Accédez"
+msgstr "Login"
+
+#: .\templates\purbeurre\sign_up.html:29
+msgid "à votre espace personnel"
+msgstr "to your personal account"
+
+#: .\templates\registration\login.html:24
+msgid "Pas encore enregistré (e)"
+msgstr "Still no account"
+
+#: .\templates\registration\login.html:25
+msgid ""
+"Inscrivez-vous</u></a> en deux clicks !<br> Vous pourrez enregistrer vos "
+"aliments préférés dans votre espace personnel et gagner en temps lors de la "
+"prochaine recherche.<br> C'est gratuit et génial"
+msgstr ""
+"Sign up</u></a> in two clicks !<br> You will be able to save your favorite "
+"foods in your personal space and save time during the next search"
+
+#: .\views.py:109
+msgid "Résultats"
+msgstr "Results"
+
+#: .\views.py:221
+msgid "Votre compte"
+msgstr "Your account"
+
+#: .\views.py:236
+msgid "Nous contacter"
+msgstr "Contact us"
+
+#: .\views.py:249 .\views.py:251
+msgid "Mentions légales"
+msgstr "Legals"
+
+#: .\views.py:293 .\views.py:297
+msgid "Vos aliments sauvegardés"
+msgstr "Your saved meals"

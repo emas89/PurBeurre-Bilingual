@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -19,8 +21,8 @@
     </div>
         <div class="container text-center">
             <br>
-            <p>Pas encore enregistré (e) ?
-            <a href="{% url 'purbeurre:sign_up' %}"><u>Inscrivez-vous</u></a> en deux clicks !<br> Vous pourrez enregistrer vos aliments préférés dans votre espace personnel et gagner en temps lors de la prochaine recherche.<br> C'est gratuit et génial !</p>
+            <p>{% trans "Pas encore enregistré (e)" %} ?
+            <a href="{% url 'purbeurre:sign_up' %}"><u>{% trans "Inscrivez-vous</u></a> en deux clicks !<br> Vous pourrez enregistrer vos aliments préférés dans votre espace personnel et gagner en temps lors de la prochaine recherche.<br> C'est gratuit et génial" %} !</p>
         </div>
 
 </section>

@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -10,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading">Bienvenue sur votre espace personnel</h2>
+                <h2 class="section-heading">{% trans "Bienvenue sur votre espace personnel" %}</h2>
                 <br><br>
             </div>
         </div>
@@ -25,8 +27,8 @@
 <section>
     <div class="container">
             <div class="text-center">
-                   <a class="btn btn-primary" href="{% url 'purbeurre:saved'%}" role="button">Mes aliments</a>
-                   <a class="btn btn-primary" href="{% url 'purbeurre:logout'%}" role="button">Déconnexion</a>
+                   <a class="btn btn-primary" href="{% url 'purbeurre:saved'%}" role="button">{% trans "Mes aliments" %}</a>
+                   <a class="btn btn-primary" href="{% url 'purbeurre:logout'%}" role="button">{% trans "Déconnexion" %}</a>
         </div>
     </div>
 

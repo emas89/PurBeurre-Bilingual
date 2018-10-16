@@ -1,5 +1,7 @@
 {% extends 'purbeurre/base.html' %}
 
+{% load i18n %}
+
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -21,10 +23,10 @@
                         </div>
                     {% endfor %}
                     <div class="text-center">
-                        <button class="btn btn-primary"  type="submit">S'enregistrer</button>
+                        <button class="btn btn-primary"  type="submit">{% trans "S'enregistrer" %}</button>
                     </div>
                     <div class="sign-in">
-                        <p>Déjà enregistré (e) ? <a href="{% url 'purbeurre:login' %}"><u>Accédez</u></a> à votre espace personnel !</p>
+                        <p>{% trans "Déjà enregistré (e)" %} ? <a href="{% url 'purbeurre:login' %}"><u>{% trans "Accédez" %}</u></a>{% trans "à votre espace personnel" %}!</p>
                     </div>
                 </form>
 
