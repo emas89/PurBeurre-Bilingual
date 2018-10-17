@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-16 11:38+0200\n"
+"POT-Creation-Date: 2018-10-17 10:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: .\templates\404.html:11
 msgid ""
 "Le produit que vous cherchez n'est pas encore présent dans notre base de "
 "données. Effectuez une autre recherche"
-msgstr ""
-"The product you are looking for is not yet in our database. Do another search"
+msgstr "The product you are looking for is not yet in our database. Do another search"
 
 #: .\templates\purbeurre\account.html:15
 msgid "Bienvenue sur votre espace personnel"
@@ -35,6 +34,10 @@ msgstr "My meals"
 #: .\templates\purbeurre\account.html:31
 msgid "Déconnexion"
 msgstr "Disconnect"
+
+#: .\templates\purbeurre\base.html:82 .\views.py:249 .\views.py:251
+msgid "Mentions légales"
+msgstr "Legal mentions"
 
 #: .\templates\purbeurre\contact.html:7
 msgid "Contactez nous"
@@ -50,11 +53,11 @@ msgstr "Nutritional benchmarks for"
 
 #: .\templates\purbeurre\detail.html:17
 msgid "Matières grasses / Lipides"
-msgstr "Fats / Lipids"
+msgstr ""
 
 #: .\templates\purbeurre\detail.html:18
 msgid "Acides gras saturés"
-msgstr "Saturated fatty acids"
+msgstr "Fats / Lipids"
 
 #: .\templates\purbeurre\detail.html:19
 msgid "Sel"
@@ -66,21 +69,21 @@ msgstr "Sugars"
 
 #: .\templates\purbeurre\detail.html:23
 msgid "Plus d'infos sur OpenFoodFacts"
-msgstr "More infos on Open Food Facts"
+msgstr "More info on OpenFoodFacts"
 
 #: .\templates\purbeurre\index.html:16
 msgid "Du gras, oui, mais de qualité"
-msgstr "Fat is ok, but a qualitative one"
+msgstr "Fat yes, but qualitative"
 
 #: .\templates\purbeurre\index.html:20
 msgid ""
 "Trouvez un produit de substitution pour ceux que vous consommez tous les "
 "jours"
-msgstr "Find a healthier meal for those you eat every day"
+msgstr "Find a substitute for those you eat every day"
 
 #: .\templates\purbeurre\index.html:24
 msgid "Produit à susbstituer"
-msgstr "Meal to be substituted"
+msgstr "Product to substitute"
 
 #: .\templates\purbeurre\index.html:26
 msgid "Go sain"
@@ -99,9 +102,7 @@ msgid ""
 "Pur Beurre est l'initiative de deux amoureux de la gastronomie française, "
 "Colette Tatou et Rémy, que vous avez déjà certainement rencontrés dans notre "
 "excellent restaurant Ratatouille"
-msgstr ""
-"Pur Beurre is the initiative of two lovers of French gastronomy, Colette "
-"Tatou and Rémy, that you have certainly met in our excellent restaurant"
+msgstr "Pure Beurre is the initiative of two lovers of French gastronomy, Colette Tatou and Rémy, whom you have certainly met in our excellent restaurant Ratatouille"
 
 #: .\templates\purbeurre\index.html:47
 msgid ""
@@ -112,7 +113,7 @@ msgid ""
 "restaurant, que je pouvais remplacer les produits aseptisés que j'avais "
 "l'habitude d'acheter par de bons produits du terroir. Et souvent pour le "
 "même prix"
-msgstr "We like to eat everything, especially in France ! Personally, a fresh baguette, good goat cheese and a good red wine are enough for me. Like everyone else, I go to shopping at the supermarket. But little by little I realized that I could replace the aseptic products that I used to buy with good local products, often for the same price, especially after the restaurant's opening"
+msgstr "We like to eat everything, especially in France! Personally, a fresh baguette, good goat cheese and a good red wine are enough for me. Like everyone else, I shop at the supermarket. But little by little I realized, especially when we opened our restaurant, that I could replace the aseptic products that I used to buy with good local products. And often for the same price"
 
 #: .\templates\purbeurre\index.html:51
 msgid ""
@@ -122,12 +123,7 @@ msgid ""
 "tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait "
 "remplacer son Nutella matinal par un aliment plus sain, je savais tout de "
 "suite où le trouver. L'idée de Pur Beurre était née !"
-msgstr ""
-"For my part I already went to many stores because I like to walk around, "
-"especially in cellars and kitchens. I knew by heart the content of organic "
-"shops (which I love) and the ingredients of all the food sold. When Colette "
-"asked me if she could replace her morning Nutella with a healthier food, I "
-"knew where to find it right away. The idea of Pur Beurre was born !"
+msgstr "For my part I already went to many stores because I like to walk around, especially in cellars and kitchens. I knew by heart the content of organic shops (which I love) and the ingredients of all the food sold. When Colette asked me if she could replace her morning Nutella with a healthier food, I knew where to find it right away. The idea of Pure Beurre was born !"
 
 #: .\templates\purbeurre\legals.html:13
 msgid "Site internet hébergé par"
@@ -147,7 +143,7 @@ msgstr "Carrot icon"
 
 #: .\templates\purbeurre\legals.html:30
 msgid "pour la startup <strong><i>Pur Beurre"
-msgstr "for the startup"
+msgstr "for the startup <strong><i>Pur Beurre"
 
 #: .\templates\purbeurre\saved.html:14
 msgid "Vous n'avez pas encore de produits sauvegardés"
@@ -157,9 +153,7 @@ msgstr "You don't have any saved products yet"
 msgid ""
 "Cherchez un produit plus sain sur notre site web et sauvegardez-le dans "
 "votre espace personnel pour le retrouver plus facilement la prochaine fois"
-msgstr ""
-"Look for a healthier product on our app and save it in your personal space "
-"to find it more easily next time!"
+msgstr "Look for a healthier product on our website and save it in your personal space to find it more easily next time"
 
 #: .\templates\purbeurre\saved.html:26
 msgid "Produit d'origine"
@@ -185,12 +179,11 @@ msgstr "Next"
 msgid ""
 "Malheureusement il n'y a pas encore d'aliment substitutif par rapport à "
 "votre choix. Veuillez nous excuser"
-msgstr ""
-"Unfortunately there is still no substitute for your choice. Please excuse us"
+msgstr "Unfortunately there is still no substitute for your choice. Please excuse us"
 
 #: .\templates\purbeurre\search.html:23
 msgid "Substituts dietétiques"
-msgstr "Healthier substitutes"
+msgstr "Healthy substitutes"
 
 #: .\templates\purbeurre\search.html:38
 msgid "Sauvegarder"
@@ -202,7 +195,7 @@ msgstr "Sign up"
 
 #: .\templates\purbeurre\sign_up.html:29
 msgid "Déjà enregistré (e)"
-msgstr "Already have an account"
+msgstr "Already signed up"
 
 #: .\templates\purbeurre\sign_up.html:29
 msgid "Accédez"
@@ -214,16 +207,25 @@ msgstr "to your personal account"
 
 #: .\templates\registration\login.html:24
 msgid "Pas encore enregistré (e)"
-msgstr "Still no account"
+msgstr "Not yet signed up"
+
+#: .\templates\registration\login.html:25
+msgid "Inscrivez-vous"
+msgstr "Sign up"
+
+#: .\templates\registration\login.html:25
+msgid "en deux clicks"
+msgstr "in two clicks"
 
 #: .\templates\registration\login.html:25
 msgid ""
-"Inscrivez-vous</u></a> en deux clicks !<br> Vous pourrez enregistrer vos "
-"aliments préférés dans votre espace personnel et gagner en temps lors de la "
-"prochaine recherche.<br> C'est gratuit et génial"
-msgstr ""
-"Sign up</u></a> in two clicks !<br> You will be able to save your favorite "
-"foods in your personal space and save time during the next search"
+"Vous pourrez enregistrer vos aliments préférés dans votre espace personnel "
+"et gagner en temps lors de la prochaine recherche"
+msgstr "You can save your favorite meals in your personal space and save time in the next search"
+
+#: .\templates\registration\login.html:25
+msgid "C'est gratuit et génial"
+msgstr "It's free and awesome"
 
 #: .\views.py:109
 msgid "Résultats"
@@ -236,10 +238,6 @@ msgstr "Your account"
 #: .\views.py:236
 msgid "Nous contacter"
 msgstr "Contact us"
-
-#: .\views.py:249 .\views.py:251
-msgid "Mentions légales"
-msgstr "Legals"
 
 #: .\views.py:293 .\views.py:297
 msgid "Vos aliments sauvegardés"

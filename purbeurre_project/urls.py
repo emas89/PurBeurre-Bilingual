@@ -20,14 +20,15 @@ from django.conf.urls.i18n import i18n_patterns
 from purbeurre import views
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
     url(r'^admin/', admin.site.urls),
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'purbeurre/', include(('purbeurre.urls', 'purbeurre'),
-        namespace='purbeurre')
-    ))
+    url(r'^$', views.index, name="index"),
+    url(r'^purbeurre/', include(('purbeurre.urls', 'purbeurre'),
+        namespace='purbeurre'
+        )),
+)
 
 if settings.DEBUG:
     import debug_toolbar
