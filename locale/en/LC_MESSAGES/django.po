@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-17 10:13+0200\n"
+"POT-Creation-Date: 2018-10-18 16:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\templates\404.html:11
 msgid ""
 "Le produit que vous cherchez n'est pas encore présent dans notre base de "
 "données. Effectuez une autre recherche"
-msgstr "The product you are looking for is not yet in our database. Do another search"
+msgstr ""
+"The product you are looking for is not yet in our database. Do another search"
 
 #: .\templates\purbeurre\account.html:15
 msgid "Bienvenue sur votre espace personnel"
@@ -35,7 +37,7 @@ msgstr "My meals"
 msgid "Déconnexion"
 msgstr "Disconnect"
 
-#: .\templates\purbeurre\base.html:82 .\views.py:249 .\views.py:251
+#: .\templates\purbeurre\base.html:84 .\views.py:249 .\views.py:251
 msgid "Mentions légales"
 msgstr "Legal mentions"
 
@@ -53,11 +55,11 @@ msgstr "Nutritional benchmarks for"
 
 #: .\templates\purbeurre\detail.html:17
 msgid "Matières grasses / Lipides"
-msgstr ""
+msgstr "Fats / Lipids"
 
 #: .\templates\purbeurre\detail.html:18
 msgid "Acides gras saturés"
-msgstr "Fats / Lipids"
+msgstr "Saturated fatty acids"
 
 #: .\templates\purbeurre\detail.html:19
 msgid "Sel"
@@ -102,7 +104,10 @@ msgid ""
 "Pur Beurre est l'initiative de deux amoureux de la gastronomie française, "
 "Colette Tatou et Rémy, que vous avez déjà certainement rencontrés dans notre "
 "excellent restaurant Ratatouille"
-msgstr "Pure Beurre is the initiative of two lovers of French gastronomy, Colette Tatou and Rémy, whom you have certainly met in our excellent restaurant Ratatouille"
+msgstr ""
+"Pure Beurre is the initiative of two lovers of French gastronomy, Colette "
+"Tatou and Rémy, whom you have certainly met in our excellent restaurant "
+"Ratatouille"
 
 #: .\templates\purbeurre\index.html:47
 msgid ""
@@ -113,7 +118,13 @@ msgid ""
 "restaurant, que je pouvais remplacer les produits aseptisés que j'avais "
 "l'habitude d'acheter par de bons produits du terroir. Et souvent pour le "
 "même prix"
-msgstr "We like to eat everything, especially in France! Personally, a fresh baguette, good goat cheese and a good red wine are enough for me. Like everyone else, I shop at the supermarket. But little by little I realized, especially when we opened our restaurant, that I could replace the aseptic products that I used to buy with good local products. And often for the same price"
+msgstr ""
+"We like to eat everything, especially in France! Personally, a fresh "
+"baguette, good goat cheese and a good red wine are enough for me. Like "
+"everyone else, I shop at the supermarket. But little by little I realized, "
+"especially when we opened our restaurant, that I could replace the aseptic "
+"products that I used to buy with good local products. And often for the same "
+"price"
 
 #: .\templates\purbeurre\index.html:51
 msgid ""
@@ -123,7 +134,12 @@ msgid ""
 "tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait "
 "remplacer son Nutella matinal par un aliment plus sain, je savais tout de "
 "suite où le trouver. L'idée de Pur Beurre était née !"
-msgstr "For my part I already went to many stores because I like to walk around, especially in cellars and kitchens. I knew by heart the content of organic shops (which I love) and the ingredients of all the food sold. When Colette asked me if she could replace her morning Nutella with a healthier food, I knew where to find it right away. The idea of Pure Beurre was born !"
+msgstr ""
+"For my part I already went to many stores because I like to walk around, "
+"especially in cellars and kitchens. I knew by heart the content of organic "
+"shops (which I love) and the ingredients of all the food sold. When Colette "
+"asked me if she could replace her morning Nutella with a healthier food, I "
+"knew where to find it right away. The idea of Pure Beurre was born !"
 
 #: .\templates\purbeurre\legals.html:13
 msgid "Site internet hébergé par"
@@ -153,7 +169,9 @@ msgstr "You don't have any saved products yet"
 msgid ""
 "Cherchez un produit plus sain sur notre site web et sauvegardez-le dans "
 "votre espace personnel pour le retrouver plus facilement la prochaine fois"
-msgstr "Look for a healthier product on our website and save it in your personal space to find it more easily next time"
+msgstr ""
+"Look for a healthier product on our website and save it in your personal "
+"space to find it more easily next time"
 
 #: .\templates\purbeurre\saved.html:26
 msgid "Produit d'origine"
@@ -179,7 +197,8 @@ msgstr "Next"
 msgid ""
 "Malheureusement il n'y a pas encore d'aliment substitutif par rapport à "
 "votre choix. Veuillez nous excuser"
-msgstr "Unfortunately there is still no substitute for your choice. Please excuse us"
+msgstr ""
+"Unfortunately there is still no substitute for your choice. Please excuse us"
 
 #: .\templates\purbeurre\search.html:23
 msgid "Substituts dietétiques"
@@ -221,7 +240,9 @@ msgstr "in two clicks"
 msgid ""
 "Vous pourrez enregistrer vos aliments préférés dans votre espace personnel "
 "et gagner en temps lors de la prochaine recherche"
-msgstr "You can save your favorite meals in your personal space and save time in the next search"
+msgstr ""
+"You can save your favorite meals in your personal space and save time in the "
+"next search"
 
 #: .\templates\registration\login.html:25
 msgid "C'est gratuit et génial"

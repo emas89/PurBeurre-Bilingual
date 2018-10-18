@@ -1,7 +1,7 @@
 # Imports
 import json
-from openfoodfacts.models import Categories, Products
-from openfoodfacts.management.commands.api_off import Command
+from purbeurre.models import Categories, Products
+from purbeurre.management.commands.api_off import Command
 from django.test import TestCase
 
 
@@ -31,7 +31,7 @@ class CommandTestCase(TestCase):
 		self.content = [prod_data]
 
 	def test_handle(self):
-		json_results = open("openfoodfacts/tests/mockup/off.json")
+		json_results = open("purbeurre/tests/mockup/off.json")
 		mock = json.load(json_results)
 
 		def mockreturn(a):

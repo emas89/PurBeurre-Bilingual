@@ -10,6 +10,8 @@
 
     <title>{% block title %}{% endblock %}</title>
 
+    {% load i18n %}
+
     {% load static %}
 
     <!-- Bootstrap core CSS -->
@@ -79,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center">
-                    <p class="my-4"><a  href="{% url 'purbeurre:legals'%}">Mentions légales</a></p>
+                    <p class="my-4"><a  href="{% url 'purbeurre:legals'%}">{% trans "Mentions légales" %}</a></p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <p class="my-4">

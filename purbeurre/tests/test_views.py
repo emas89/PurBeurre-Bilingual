@@ -401,3 +401,19 @@ class SavedTestPageCase(TestCase):
 			"replacement": self.replacement.id_product,
 			})
 		self.assertFalse(Substitutes.objects.exists())
+
+
+# Translations
+class TraductionTest(unittest.TestCase):
+	""" 
+	Translations testing
+	"""
+	def test_internationalization(self):
+		"""
+		Testing for an expected translation
+		"""
+		for lang, h1_text in [('fr', 'Du gras, oui, mais de qualité'), ('en', 'Fat yes, but qualitative')]:
+			activate(lang)
+			self.browser.get(self.get_full_url("purbeurre"))
+			h1 = self.browser.find_element_by_tag_name("h1")
+			self.assertEqual(h1.text, h1_text)

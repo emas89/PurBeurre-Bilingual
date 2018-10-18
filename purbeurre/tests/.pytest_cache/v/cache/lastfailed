@@ -1,5 +1,6 @@
 {
   "api_off_test.py": true,
+  "test_internationalization.py": true,
   "test_models.py": true,
   "test_views.py": true,
   "tests_models.py": true
